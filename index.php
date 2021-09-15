@@ -1,15 +1,15 @@
-<?php
-$dir = "/your_folder_here/";
-
-// Open a known directory, and proceed to read its contents
-if (is_dir($dir)) {
-    if ($dh = opendir($dir)) {
-        while (($file = readdir($dh)) !== false) {
-            if($file == $_POST['SEARCHBOX_INPUT']){
-                echo('<a href="'.$dir . $file.'">'. $file .'</a>'."\n");
-            }
-        }
-        closedir($dh);
-    }
-}
-?>
+<html>
+    <head></head>
+    <body>
+    <div class="input-group">
+      <!-- the "text1" field as displayed in the image -->
+        <input type="text" class="form-control" placeholder="enter chapter no"/>
+        <span class="input-group-addon"></span>
+      <!-- the "text2" field as displayed in the image -->
+        <input type="text" class="form-control" placeholder="enter verse no"/>
+        <span class="input-group-addon"></span>
+      <!-- the "button" field as displayed in the image -->
+        <button type="submit"><i class="fa fa-search">GO</i></button>
+    </div>
+ 
+    </html>
